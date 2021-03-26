@@ -1,7 +1,5 @@
 # Berry Textadept support
 
-This package comes with both a theme and a syntax lexer.
-
 ![screenshot](https://raw.githubusercontent.com/sodomon2/textadept-berry/master/screenshot.png)
 
 ## Install
