@@ -67,10 +67,6 @@ lex:add_rule('string', token(lexer.STRING, lexer.delimited_range("'") +
                                            lexer.delimited_range('"')))
 
 -- Comments.
---local line_comment = '#' * lexer.nonnewline_esc^0
---local block_comment = '#-' * (lexer.any - '-#')^0 * P('-#')^-1
---lex:add_rule('comment', token(lexer.COMMENT, line_comment + block_comment))
--- Comments.
 local line_comment = '#' * lexer.nonnewline_esc^0
 local block_comment = lexer.starts_line('#-') *
                       (lexer.any - lexer.newline * '-#')^0 *
