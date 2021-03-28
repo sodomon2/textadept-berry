@@ -19,11 +19,11 @@ lex:add_rule('keyword', token(lexer.KEYWORD, word_match[[
 -- Function.
 lex:add_rule('function', token(lexer.FUNCTION, word_match[[
   print count assert type compile int real number
+  size char open str
 ]]))
 
 -- Libraries
 local library = token('library', word_match[[
-  size char open str
   -- STRING
   string.format string.count string.split
   string.find string.hex string.byte
